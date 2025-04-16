@@ -72,7 +72,7 @@ function portfolioItemDetails(portfolioItem){
 }
 
 /*=============== SERVICES MODAL ===============*/
-
+const modalViews = document
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
