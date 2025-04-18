@@ -22,7 +22,10 @@
 </head>
 
 <body>
-    <!--========== SIDEBAR ==========-->
+    <!--========== SIDEBAR ==========-->    
+    <div class="nav__toggle" id="nav__toggle">
+        <i class="uil uil-bars"></i>
+    </div>
     <aside class="sidebar" id="sidebar">
         <nav class="nav">
             <div class="nav__logo">
@@ -54,6 +57,10 @@
             </div>
             <div class="btn__share">
                 <i class="uil uil-share-alt social__share"></i>
+            </div>
+
+            <div class="nav__close" id="nav__close">
+                <i class="uil uil-times"></i>
             </div>
         </nav>
     </aside>
@@ -716,14 +723,173 @@
             </div>
         </section>
 
-        
-        
         <!--===== Testimonials =====-->
+
+        <section class="testimonials section">
+            <h2 data-heading="My Clients Say" class="section__title">Testimonials</h2>
+            <div class="testimonials__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                         <div class="testimonial__quote">
+                            <i class="bx bxs-quote-alt-left"></i>
+                         </div>
+                         <p class="testimonial__description">Lorem ipsum dolor sit amet consectur adipisicing
+                            elit. Expercitions qurhfnd ducuim ea.</p>
+                            <h3 class="testimonial__date">March 27. 2020</h3>
+                            <div class="testimonial__profile">
+                                <img src="assets/img/client1.jpg" alt="" class="testimonial__profile-img">
+
+                                <div class="testimonial__profile-data">
+                                    <span class="testimonial__profile-name">lee doe</span>
+                                    <span class="testimonial__profile-detail">Director of a company</span>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                           <i class="bx bxs-quote-alt-left"></i>
+                        </div>
+                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectur adipisicing
+                           elit. Expercitions qurhfnd ducuim ea.</p>
+                           <h3 class="testimonial__date">March 27. 2020</h3>
+                           <div class="testimonial__profile">
+                               <img src="assets/img/client2.jpg" alt="" class="testimonial__profile-img">
+
+                               <div class="testimonial__profile-data">
+                                   <span class="testimonial__profile-name">lee doe</span>
+                                   <span class="testimonial__profile-detail">Director of a company</span>
+                               </div>
+                           </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                    <div class="testimonial__quote">
+                       <i class="bx bxs-quote-alt-left"></i>
+                    </div>
+                    <p class="testimonial__description">Lorem ipsum dolor sit amet consectur adipisicing
+                       elit. Expercitions qurhfnd ducuim ea.</p>
+                       <h3 class="testimonial__date">March 27. 2020</h3>
+                       <div class="testimonial__profile">
+                           <img src="assets/img/client3.jpg" alt="" class="testimonial__profile-img">
+
+                           <div class="testimonial__profile-data">
+                               <span class="testimonial__profile-name">lee doe</span>
+                               <span class="testimonial__profile-detail">Director of a company</span>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
         
         <!--===== Contact =====-->
-        
+        <section class="contact section" id="contact">
+            <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="uil uil-envelope-edit info__icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">adwaithprakash03@gmail.com</span>
+                            <span class="contact__button">
+                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="uil uil-whatsapp info__icon"></i> 
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">+91-9605028753</span>
+                            <span class="contact__button">
+                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="uil uil-facebook-messenger info__icon"></i> 
+                            <h3 class="contact__card-title">Messenger</h3>
+                            <span class="contact__card-data">user.123</span>
+                            <span class="contact__button">
+                                Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <form action="" class="contact__form">
+                        <div class="input__container">
+                            <input type="text" class="input">
+                            <label for="">Username</label>
+                            <span>Username</span>
+                        </div>
+
+                        <div class="input__container">
+                            <input type="email" class="input">
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+
+                        <div class="input__container">
+                            <input type="tel" class="input">
+                            <label for="">Phone</label>
+                            <span>Phone</span>
+                        </div>
+
+                        <div class="input__container textarea">
+                            <textarea name="" id="" class="input" ></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+                        <button type="submit" class="button"><i class="uil uil-navigator button__icon"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
         <!--===== FOOTER =====-->
-        
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                     <div>
+                        <h1 class="footer__title">Adwaith</h1>
+                        <span class="footer__subtitle">Frontend Developer</span>
+                     </div>
+
+                     <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+
+                        <li>
+                            <a href="#work" class="footer__link">Work</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                     </ul>
+
+                     <div class="footer__socials">
+                        <a href="#" target="_blank" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                     </div>
+                </div>
+                <p class="footer__copy">&#169; AP. All right reserved</p>
+            </div>
+        </footer>
     </main>
 
     <!--========== SCROLL UP ==========-->
