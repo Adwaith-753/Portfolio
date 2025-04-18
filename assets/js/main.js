@@ -72,15 +72,88 @@ function portfolioItemDetails(portfolioItem){
 }
 
 /*=============== SERVICES MODAL ===============*/
-const modalViews = document
+const modalViews = document.querySelectorAll('.services__model'),
+      modalBtns = document.querySelectorAll('.services__button'),
+      modalCloses = document.querySelectorAll('.services__model-close')
+    
+let model = function(modelClick){
+    modalViews[modelClick].classList.add('active-model')
+}
+modalBtns.forEach((modalBtns,i)=>{
+    modalBtns.addEventListener('click',()=>{
+        model(i)
+    })
+})
 
+modalCloses.forEach((modalCloses)=>{
+    modalCloses.addEventListener("click",()=>{
+        modalViews.forEach((modalViews)=>{
+            modalViews.classList.remove('active-model')
+        })
+    })
+})
 /*=============== SWIPER TESTIMONIAL ===============*/
+let swiper = new Swiper(".testimonials__container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints:{
+        576:{
+            slidesPerView:2
+        },
+        768:{
+            slidesPerView:2,
+            spaceBetween:48,
+        },
+    }
+});
 
 
 /*=============== INPUT ANIMATION ===============*/
+const inputs = document.querySelectorAll(".input");
+
+function focusfunc(){
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurfunc(){
+    let parent = this.parentNode;
+    if(this.value == ""){
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("focus", focusfunc);
+    input.addEventListener("blur", blurfunc);  // Fixed this line
+});
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
 
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() 
+ {
+  let scrolly = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    if (scrolly > sectionTop && scrolly <= sectionTop + sectionHeight) {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add("active-link");
+    } else {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove("active-link");
+    }
+  });
+}
 
 /*=============== SHOW SCROLL UP ===============*/
