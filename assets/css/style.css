@@ -148,6 +148,7 @@ input{
     height: 100vh;
     background-color: var(--body-color);
     border-right: 1px solid var(--box-color);
+    transition: .5s;
 }
 
 .nav__logo{
@@ -223,6 +224,7 @@ font-size: 1.5rem;
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: var(--z-fixed);
 }
 
 .nav__close{
@@ -1034,7 +1036,7 @@ textarea.input{
     font-size: 1rem;
     font-weight: var(--font-medium);
     pointer-events: none;
-    z-index: 1000;
+    z-index: 15;
     transition: .5s;
 }
 
@@ -1052,7 +1054,7 @@ textarea.input{
     font-size: var(--small-font-size);
     padding: 0 .4rem;
     pointer-events: none;
-    z-index: 500;
+    z-index: var(--z-fixed);
 }
 
 .input__container span::before,
@@ -1468,4 +1470,53 @@ textarea.input{
 }
 
 /* For Small Devices */
-@media screen and (max-width: 350px) {}
+@media screen and (max-width: 350px) {
+    .container{
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .home__img{
+        width: 200px;
+    }
+
+    .home__title{
+        font-size: var(--h1-font-size);
+    }
+
+    .home__subtitle{
+        font-size: var(--normal-font-size);
+    }
+
+    .about__info{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: .5rem;
+    }
+
+    .contact__container,
+    .work__container,
+    .skills__container,
+    .qualification__container{
+        grid-template-columns: 1fr;
+    }
+
+    .skills__title{
+        font-size: var(--normal-font-size);
+    }
+
+    .work__item{
+        font-size: var(--small-font-size);
+    }
+
+    .work__filters{
+        column-gap: .25rem;
+    }
+
+    .services__container{
+        grid-template-columns: max-content;
+    }
+
+    .services__content{
+        padding-right:3.5rem ;
+    }
+}
