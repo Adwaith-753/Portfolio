@@ -12,7 +12,8 @@ This portfolio project showcases my skills in web development using **HTML**, **
 
 ## How to View
 
-You can view the live portfolio by opening the `index.html` file in your browser or by visiting the hosted site if available.
+You can view the live portfolio by visiting this link:  
+[https://adwaith-753.github.io/Portfolio/](https://adwaith-753.github.io/Portfolio/)
 
 ## Technologies Used
 
